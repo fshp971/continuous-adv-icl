@@ -1,0 +1,8 @@
+name: gcq
+suffix_length: 20
+steps: 200
+search_width: 128
+top_bq: 128
+batch_size: 128
+width_bs: 64
+kv_cache: True

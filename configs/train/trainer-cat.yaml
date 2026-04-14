@@ -1,0 +1,32 @@
+report_freq: 1
+train_steps: 60
+batch_size: 8
+utility_batch_size: 56
+utility_split_bs: 4
+utility_max_length: 2048
+alpha_toward: 0.5
+alpha_away: 0.5
+alpha_utility: 1.0
+alpha_embed: 0
+cutoff_toward: 1.0
+cutoff_away: 3.0
+
+attacker_config:
+    steps: 10
+    step_size: 0.0
+    radius: 0.0
+    norm_type: l2
+
+optimizer_config:
+    name: adamw
+    lr: 2.0e-4
+    weight_decay: 0.0
+
+scheduler_config:
+    name: step_lr
+    step_size: 400
+    gamma: 1
+
+datacollator_config:
+    benign_text:
+        - "Sorry, I can't do that."
